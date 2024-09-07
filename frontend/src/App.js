@@ -9,7 +9,7 @@ const App = () => {
   const [error, setError] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false); // State to control the modal visibility
 
-  // Fetch weather for city
+  // Fetching weather for city
   const getWeather = async () => {
     try {
       const res = await axios.get(`http://127.0.0.1:5000/weather?city=${city}`);
@@ -21,7 +21,7 @@ const App = () => {
     }
   };
 
-  // Fetch 5-day forecast for city
+  // Fetching 5-day forecast for city
   const getForecast = async () => {
     try {
       const res = await axios.get(`http://127.0.0.1:5000/forecast?city=${city}`);
@@ -33,7 +33,7 @@ const App = () => {
     }
   };
 
-  // Fetch weather for current location using Geolocation API
+  // Fetching weather for current location using Geolocation API
   const getLocationWeather = async () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(async (position) => {
@@ -52,7 +52,7 @@ const App = () => {
     }
   };
 
-  // Format date for 5-day forecast
+  // Formatting date for 5-day forecast
   const formatDate = (dt_txt) => {
     const date = new Date(dt_txt);
     return date.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
