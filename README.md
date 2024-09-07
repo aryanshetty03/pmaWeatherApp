@@ -33,7 +33,9 @@ In the project directory, you can run:
 To install Axios to run http requests,
 and then head into the backend folder.
 ### `cd backend`
-Here you can create a virtual environment and install dependencies:
+Firstly, I deactivated the private key I committed to git by mistake, realizing the consequences. So to use this repo, creating an OpenWeather acccount and replacing the API_KEY in backend/app.py with your private key would be the first step. 
+
+Then you can create a virtual environment and install dependencies:
 ### `python3 -m venv venv`
 ### `source venv/bin/activate`
 ### `pip install -r requirements.txt`
@@ -41,7 +43,7 @@ Here you can create a virtual environment and install dependencies:
 This will run the backend at http://127.0.0.1:5000.
 
 
-Then you can head into the frontend either in another terminal or any way of your choice
+Head into the frontend directory either in another terminal or any way of your choice
 ### `cd frontend`
 ### `npm start`
 Runs the app in the development mode.\
